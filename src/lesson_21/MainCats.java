@@ -67,6 +67,17 @@ public class MainCats {
 
         catClone = null; // null - ничто. Ссылка не ссылается ни на какой объект
         // Если у переменной, значение которой null попытаться вызвать метод, получить свойство -
-        catClone.whoAmI();
+        // программа завершится ошибкой NullPointerException.
+        // У null нельзя вызвать метод, присвоить или получить значение поля - NPE
+//        System.out.println(catClone.age);
+//        catClone.age = 44;
+//        catClone.whoAmI();  //
+
+        if (catClone != null) {
+            System.out.println(catClone.name);
+            catClone.whoAmI();
+        } else {
+            System.out.println("В переменная хранится null");
+        }
     }
 }
