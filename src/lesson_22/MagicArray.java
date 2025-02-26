@@ -162,8 +162,6 @@ public class MagicArray {
         int index = indexOf(value);
         if (index >= 0 && index < cursor) {
 
-            int val = array[index];
-
             for (int i = index; i < cursor - 1; i++) {
                 array[i] = array[i + 1];
             }
