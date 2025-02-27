@@ -1,18 +1,18 @@
-package lesson_22;
+package homework_23;
 
 import java.util.Arrays;
 
-public class MagicArray {
-    int[] array;
-    int cursor;
+public class MagicArray23 {
+    private int[] array;
+    private int cursor;
 
     // Методы, расширяющие функционал массива
 
-    public MagicArray() {
+    public MagicArray23() {
         this.array = new int[10]; // [0, 0...0]
     }
 
-    public MagicArray(int[] array) {
+    public MagicArray23(int[] array) {
 
         if (array == null || array.length == 0) {
             this.array = new int[10];
@@ -24,7 +24,7 @@ public class MagicArray {
     }
 
     // Добавление в массив одного элемента
-    void add(int value) {
+    public void add(int value) {
 
         // Нам нужна проверка! Есть ли свободное место во внутреннем массиве
         // Если нет места, нужно добавить место
@@ -38,7 +38,7 @@ public class MagicArray {
     }
 
     // Динамическое расширение массива
-    void expandArray() {
+    private void expandArray() {
         System.out.println("Расширяем внутрений массив! Курсор = " + cursor);
         /*
         1. Создать новый массив большего размера (в 2 раза больше)
@@ -60,7 +60,7 @@ public class MagicArray {
     }
 
     // Добавление в массив нескольких элементов
-    void add(int... numbers) {
+    public void add(int... numbers) {
         // с numbers я могу обращаться точно такие, как со ссылкой на массив int
 //        System.out.println("Принял несколько int:" + numbers.length);
 //        System.out.println(Arrays.toString(numbers));
@@ -87,12 +87,12 @@ public class MagicArray {
     }
 
     // Текущее кол-во элементов в массиве
-    int size() {
+    public int size() {
         return cursor;
     }
 
     // Возвращает значение по индексу
-    int get(int index) {
+    public int get(int index) {
         // Проконтролировать входящий индекс!
 
         if (index >= 0 && index < cursor) {
@@ -107,7 +107,7 @@ public class MagicArray {
     }
 
     // Удалить элемент по индексу. Вернуть старое значение.
-    int remove(int index) {
+    public int remove(int index) {
         /*
         1. Проверка индекса на валидность
         2. Удалить значение по индексу
@@ -136,7 +136,7 @@ public class MagicArray {
 
     //Поиск по значению
     // {1, 100, 5, 24, 0} -> indexOf(5) = 2; indexOf(50) = -1
-    int indexOf(int value) {
+    public int indexOf(int value) {
         // Перебираю все значимые элементы
         // Если элемент равен искомому - вернуть индекс такого элемента
         // Если перебрал все элементы - не нашел совпадений - вернуть -1
@@ -153,7 +153,7 @@ public class MagicArray {
 
     // Индекс последнего вхождения.
     // {1, 100, 5, 100, 24, 0, 100} -> lastIndexOf(100) -> 6
-    int lastIndexOf(int value) {
+    public int lastIndexOf(int value) {
 
         for (int i = cursor - 1; i >= 0; i--) {
             if (array[i] == value) return i;
@@ -162,9 +162,9 @@ public class MagicArray {
     }
 
     // Удаление элемента по значению
-    boolean removeByValue(int value) {
+    public boolean removeByValue(int value) {
         /*
-        1. Есть ли элемент с  таким значением - indexOf
+        1. Есть ли элемент с таким значением - indexOf
         2. Если элемента нет - ничего не пытаемся удалить - возвращаем false
         3. Если найден - удалить и затем вернуть true.
          */
@@ -183,6 +183,7 @@ public class MagicArray {
 //        return null;
 //    }
 
+    // Написать метод, который вернет массив, состоящий из элементов магического массива
     public int[] toArray() {
         int[] result = new int[cursor];
         for (int i = 0; i < cursor; i++) {
@@ -192,7 +193,7 @@ public class MagicArray {
     }
 
 
-    void test() {
+    public void test() {
         System.out.println(Arrays.toString(array));
     }
 }
