@@ -1,18 +1,18 @@
-package lesson_22;
+package homework_22;
 
 import java.util.Arrays;
 
-public class MagicArray {
+public class MagicArrayEncaps {
     int[] array;
     int cursor;
 
     // Методы, расширяющие функционал массива
 
-    public MagicArray() {
+    public MagicArrayEncaps() {
         this.array = new int[10]; // [0, 0...0]
     }
 
-    public MagicArray(int[] array) {
+    public MagicArrayEncaps(int[] array) {
 
         if (array == null || array.length == 0) {
             this.array = new int[10];
@@ -154,11 +154,21 @@ public class MagicArray {
     // Индекс последнего вхождения.
     // {1, 100, 5, 100, 24, 0, 100} -> lastIndexOf(100) -> 6
     int lastIndexOf(int value) {
-
         for (int i = cursor - 1; i >= 0; i--) {
             if (array[i] == value) return i;
         }
+
         return -1;
+        /*
+        int index = -1;
+        for (int i = 0; i < cursor; i++) {
+            if(array[i] = value) {
+            // Значения совпали, обновляю переменную index
+                index = i;
+            }
+        }
+        return index;
+         */
     }
 
     // Удаление элемента по значению
@@ -174,7 +184,6 @@ public class MagicArray {
         // В эту строчку кода попадём, только при index = 0 или больше
         remove(index);
         return true;
-
     }
 
     //  // {1, 100, 5, 100, 24, 0, 100}
@@ -182,6 +191,14 @@ public class MagicArray {
 //       // {1, 3, 6}
 //        return null;
 //    }
+
+    public int[] toArray() {
+        int[] result = new int[cursor];
+        for (int i = 0; i < cursor; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
 
 
     void test() {
@@ -201,4 +218,5 @@ public class MagicArray {
 9. Поиск по значению. Возвращать индекс первого вхождения элемента ++
 10. Индекс последнего вхождения.
 11. Конструктор, принимающий обычный массив. Создать магический массив с элементами из этого массива
+12. Написать метод
  */
