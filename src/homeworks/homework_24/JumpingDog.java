@@ -21,18 +21,29 @@ Task 2 * (Опционально)
  */
 public class JumpingDog {
 
-    private String name;
+    private String dogName;
     private int jumpHeight;
     private int barrierHeight;
 
     public JumpingDog(String name, int jumpHeight) {
-        this.name = name;
+        this.dogName = name;
         this.jumpHeight = jumpHeight;
-        System.out.println("vdsgrgr");
     }
 
-    public JumpingDog(int barrierHeight) {
-        this.barrierHeight = barrierHeight;
+    public String getName() {
+        return dogName;
+    }
+
+    public void setName(String name) {
+        this.dogName = name;
+    }
+
+    public int getJumpHeight() {
+        return jumpHeight;
+    }
+
+    public void setJumpHeight(int jumpHeight) {
+        this.jumpHeight = jumpHeight;
     }
 
     public void jump() {

@@ -9,7 +9,7 @@ public class Less22Main {
         // {1, 3, 66, 5, 4, 100}
         // add(100), remove(5) - {1, 3, 66, 4, 100}
 
-        MagicArray magic = new MagicArray();
+        lesson_22.MagicArray magic = new lesson_22.MagicArray();
 
         System.out.println(magic.toString());
 

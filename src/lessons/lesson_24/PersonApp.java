@@ -5,18 +5,18 @@ package lesson_24;
 public class PersonApp {
     public static void main(String[] args) {
 
-        Person garry = new Person("Garry",31,"Photo");
+        lesson_24.Person garry = new lesson_24.Person("Garry",31,"Photo");
         System.out.println(garry.toString());
 
-        Person john = new Person("John",75,"Reading, Music");
+        lesson_24.Person john = new lesson_24.Person("John",75,"Reading, Music");
         System.out.println(john.toString());
 
-        Person[] people = new Person[5]; // Создаю массив для 5
+        lesson_24.Person[] people = new lesson_24.Person[5]; // Создаю массив для 5
         // Значение по умолчанию для типов данных - null.
 
         people[0] = garry;
         people[3] = john;
-        people[1] = new Person("Tom",5,"crying");
+        people[1] = new lesson_24.Person("Tom",5,"crying");
 
         System.out.println("\n===================\n");
 
@@ -39,7 +39,7 @@ public class PersonApp {
         }
 
         System.out.println("\n==================================\n");
-        Person test = new Person("Test",50,"coding");
+        lesson_24.Person test = new lesson_24.Person("Test",50,"coding");
 
         people[2] = test;
 
@@ -53,7 +53,7 @@ public class PersonApp {
 
         test = people[1];
 
-        Person deleteMe = new Person("DeleteMe",43,"gut");
+        lesson_24.Person deleteMe = new lesson_24.Person("DeleteMe",43,"gut");
         deleteMe = null; // никто не ссылается на объект, позже будет удалён.
 
 
