@@ -3,7 +3,7 @@ package lesson_23;
 public class CatApp {
     public static void main(String[] args) {
 
-        Cat cat = new Cat("Catty", 8, 5);
+        lesson_23.Cat cat = new lesson_23.Cat("Catty", 8, 5);
         cat.sayMeow();
 
         System.out.println(cat.toString());
@@ -16,7 +16,7 @@ public class CatApp {
 
         System.out.println(cat.toString());
 
-        Cat cat2 = new Cat(null,150,240);
+        lesson_23.Cat cat2 = new lesson_23.Cat(null,150,240);
         System.out.println(cat2.toString());
 
         //cat2.testMethod(); // Метод не доступен т.к. помечен private

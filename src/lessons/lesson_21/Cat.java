@@ -1,6 +1,7 @@
 package lesson_21;
 
-public class Cat {
+public class
+Cat {
     // характеристики / состояние будущих объектов
     String name; // поле класса
     String color;

@@ -3,7 +3,7 @@ package lesson_21;
 public class MainCats {
     public static void main(String[] args) {
 
-        Cat cat = new Cat(); // Создание нового объекта класса Cat
+        lesson_21.Cat cat = new lesson_21.Cat(); // Создание нового объекта класса Cat
         // 1. Физически в памяти создаётся объект типа Cat
         // 2. Вызывается конструктор класса
         //    для инициализации свойств объекта (заполнение полей значениями)
@@ -26,7 +26,7 @@ public class MainCats {
 
         System.out.println("Возраст: " + cat.age);
 
-        Cat cat1 = new Cat("Max");
+        lesson_21.Cat cat1 = new lesson_21.Cat("Max");
         // Будет создан новый объект типа Cat
         // Имя (строка) которая была передана в конструктор будет
         // присвоено свойству name объекта класса
@@ -40,18 +40,18 @@ public class MainCats {
 
         System.out.println("\n========================\n");
 
-        Cat cat2 = new Cat("Diamond", "red");
+        lesson_21.Cat cat2 = new lesson_21.Cat("Diamond", "red");
 
         cat2.whoAmI();
 
-        Cat barsik = new Cat("Barsik","white", 2);
+        lesson_21.Cat barsik = new lesson_21.Cat("Barsik","white", 2);
 
         System.out.println("barsik.name: " + barsik.name);
         System.out.println("barsik.color: " + barsik.color);
         System.out.println("barsik.age: " + barsik.age);
         barsik.whoAmI();
 
-        Cat catClone = barsik;
+        lesson_21.Cat catClone = barsik;
 
         catClone.whoAmI();
         barsik.age = 100;
@@ -61,7 +61,7 @@ public class MainCats {
 
         System.out.println("\n=========================");
 
-        catClone = new Cat("Kratos", "black", 66);
+        catClone = new lesson_21.Cat("Kratos", "black", 66);
         catClone.whoAmI();
         barsik.whoAmI();
 

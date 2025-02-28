@@ -22,5 +22,13 @@ public class Home23Main {
         System.out.println(Arrays.toString(magic.toArray()));
         System.out.println(magic.size());
 
+        EmployeeInLec employee1 = new EmployeeInLec("Max",45,5000.00);
+        employee1.info();
+        System.out.println(employee1.getName());
+
+        EmployeeInLec peter = new EmployeeInLec("Peter",35,3500.00);
+        peter.info();
+        System.out.println(peter.getSalary());
+
     }
 }

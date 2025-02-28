@@ -3,7 +3,7 @@ package lesson_21;
 public class MainDog {
     public static void main(String[] args) {
 
-        Dog dog = new Dog("Bim", 5);
+        lesson_21.Dog dog = new lesson_21.Dog("Bim", 5);
 
         dog.info();
 
