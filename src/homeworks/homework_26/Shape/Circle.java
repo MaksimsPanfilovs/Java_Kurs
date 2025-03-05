@@ -1,4 +1,4 @@
-package homeworks.homework_26;
+package homeworks.homework_26.Shape;
 
 public class Circle extends Shape {
 
@@ -16,7 +16,7 @@ public class Circle extends Shape {
     }
 
     public double CalculateArea() {
-        double area = 2 * PI * r;
+        double area = PI * r * r;
         System.out.println("Площадь фигуры - " + name + " = " + area);
         return area;
     }
@@ -25,7 +25,5 @@ public class Circle extends Shape {
         return r;
     }
 
-    public void setR(double radius) {
-        this.r = radius;
-    }
+
 }
