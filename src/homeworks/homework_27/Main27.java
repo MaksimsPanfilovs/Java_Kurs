@@ -18,5 +18,10 @@ public class Main27 {
         BusDriver driver = new BusDriver("alex", "LC5253");
         Autobus27 bus = new Autobus27(driver, 15);
         System.out.println(bus.toString());
+
+        Passenger pas1 = new Passenger("John");
+        Passenger pas2 = new Passenger("Max");
+        Passenger pas3 = new Passenger("Lisa");
+
     }
 }
