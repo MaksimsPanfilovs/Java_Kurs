@@ -1,0 +1,33 @@
+package lessons.lesson_29.children;
+
+public class Child extends Parent {
+
+    // Скопировано от родителя
+    // private String name;
+
+    private int age;
+
+    // Если нет ни одного, будет добавлен конструктор вида:
+//    public Child() {
+//        // вызывается пустой конструктор родителя
+//        super();
+//    }
+
+    public Child() {
+        // сначала я ДОЛЖЕН создать объект родителя
+        // super(); // Если я не вызвал конструктор родителя
+        super("Default");
+        this.age = 20;
+    }
+
+    public Child(String name, int age) {
+        super(name);
+        this.age = age;
+    }
+
+    // Я не могу переопределить final-метод в наследнике
+//    @Override
+//    void show() {
+//        System.out.println("Another show");
+//    }
+}

@@ -1,0 +1,15 @@
+package lessons.lesson_29.abstracts;
+
+public class Cat extends Animal {
+
+    @Override
+    void move() {
+        System.out.println("Кот передвигается");
+    }
+    @Override
+    void eat() {
+        System.out.println("Котик очень любит кушать!");
+    }
+
+
+}

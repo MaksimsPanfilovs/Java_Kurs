@@ -12,4 +12,7 @@ public class Dog extends Animals {
     public String toString() {
         return super.toString() + "| Dog. Дополнение реализации родительского метода.";
     }
+    public void bark() {
+        System.out.println("Dog bark!");
+    }
 }
