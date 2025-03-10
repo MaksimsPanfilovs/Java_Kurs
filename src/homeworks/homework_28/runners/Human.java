@@ -14,6 +14,7 @@ public class Human {
 
     private int runspeed;
     private int restTime;
+
     protected    String typeRunner = "Человек";
 
     public Human() {

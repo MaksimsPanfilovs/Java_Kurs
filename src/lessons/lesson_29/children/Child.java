@@ -5,7 +5,7 @@ public class Child extends Parent {
     // Скопировано от родителя
     // private String name;
 
-    private int age;
+    int age;
 
     // Если нет ни одного, будет добавлен конструктор вида:
 //    public Child() {
@@ -22,6 +22,7 @@ public class Child extends Parent {
 
     public Child(String name, int age) {
         super(name);
+        this.name = name;
         this.age = age;
     }
 

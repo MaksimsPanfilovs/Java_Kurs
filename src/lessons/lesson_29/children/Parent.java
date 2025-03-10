@@ -2,12 +2,12 @@ package lessons.lesson_29.children;
 
 public class Parent {
 
-    private String name;
+    String name;
 
     // Автоматически добавляется при компиляции (т.к. нет ни одного конструктора)
-    public Parent() {
-        // Все поля инициализируются значениями по умолчанию
-    }
+//    public Parent() {
+//        // Все поля инициализируются значениями по умолчанию
+//    }
 
 
     public Parent(String name) {

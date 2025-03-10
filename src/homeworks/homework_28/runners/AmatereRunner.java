@@ -3,6 +3,7 @@ package homeworks.homework_28.runners;
 public class AmatereRunner extends Human {
 
 
+    // Блок инициализации
     {
         typeRunner = "Спортсмен-любитель";
     }

@@ -10,14 +10,14 @@ Task 1
 
 Вы можете выбрать свои сущности для описания
  */
-public class Transport {
+public class Transport21 {
 
     String name;
     int peopleNum;
     double cargoQuan;
 
 
-    public Transport(String name, int peopleNum, double cargoQuan){
+    public Transport21(String name, int peopleNum, double cargoQuan){
 
         this.name = name;
         this.peopleNum = peopleNum;
