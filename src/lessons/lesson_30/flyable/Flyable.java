@@ -4,8 +4,8 @@ public interface Flyable {
 
     void fly();
 
-//    default void test() {
-//        System.out.println("test");
-//    }
+    default void test() {
+        System.out.println("test");
+    }
 
 }

@@ -11,6 +11,11 @@ public class Duck implements Flyable, Swimmable {
     }
 
     @Override
+    public void test() {
+        Flyable.super.test();
+    }
+
+    @Override
     public void swim() {
         System.out.println("Duck swimming");
     }

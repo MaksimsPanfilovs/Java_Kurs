@@ -38,6 +38,9 @@ public class AppLication {
         presentation.colorPrint();
 
 
+        book.defaultMethod();
+
+
 
     }
 }
