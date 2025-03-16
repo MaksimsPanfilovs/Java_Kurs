@@ -2,9 +2,10 @@ package lists;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Objects;
 
-public class MyArrayList<T> implements MyList<T>  {
+public class MyArrayList<T> implements MyList<T> {
     private T[] array;
     private int cursor;
 
@@ -232,6 +233,31 @@ public class MyArrayList<T> implements MyList<T>  {
         return result;
     }
 
+    // Не возможно вернуть объект типа интерфейс.
+    // Если тип возвращаемого значения (или параметр метода) имеет тип "Интерфейс".
+    // это значит, что я должен вернуть объект, который имплементировал этот интерфейс.
+    @Override
+    public Iterator<T> iterator() {
+        return new MyIterator();
+    }
+
+    private class MyIterator implements Iterator<T> {
+
+        int currentIndex = 0;
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex < cursor;
+        }
+
+        @Override
+        public T next() {
+            return array[currentIndex++]; // в одну строку.
+//            T value = array[currentIndex];
+//            currentIndex ++;
+//            return value;
+        }
+    } // End class MyIterator
 
     public void test() {
         System.out.println(Arrays.toString(array));

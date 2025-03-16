@@ -13,35 +13,43 @@ void setFirst(T value) — устанавливает значение перв�
 void setSecond(T value) — устанавливает значение второго элемента.
 void swap() — меняет местами первый и второй элементы.
  */
-public class Pair<T> {
+public class Pair<E> {
 
-    private T first;
-    private T second;
+    private E first;
+    private E second;
 
-    public Pair(T first, T second) {
+    public Pair(E first, E second) {
         this.first = first;
         this.second = second;
     }
 
     public void swap() {
-        T temp = first;
+        E temp = first;
         first = second;
         second = temp;
     }
 
-    public T getFirst() {
+    public E getFirst() {
         return first;
     }
 
-    public void setFirst(T first) {
+    public void setFirst(E first) {
         this.first = first;
     }
 
-    public T getSecond() {
+    public E getSecond() {
         return second;
     }
 
-    public void setSecond(T second) {
+    public void setSecond(E second) {
         this.second = second;
+    }
+
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "first=" + first +
+                ", second=" + second +
+                '}';
     }
 }
