@@ -15,7 +15,7 @@ public class SimpleApp {
         SimpleBox[] boxes = new SimpleBox[3];
         boxes[0] = box;
         boxes[1] = box1;
-        boxes[2] = new SimpleBox("30"); // ОШИБКА при выполнении
+        boxes[2] = new SimpleBox(30); // ОШИБКА при выполнении
 
         int sumAll = 0;
 
