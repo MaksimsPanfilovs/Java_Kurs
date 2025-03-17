@@ -33,6 +33,7 @@ public class Person34Test {
         person.setEmail(validEmail);
 
         Assertions.assertEquals(validEmail, person.getEmail());
+
     }
 
     /*
@@ -52,20 +53,25 @@ public class Person34Test {
         Assertions.assertNotEquals(invalidEmail, person.getEmail());
         Assertions.assertEquals(startEmail, person.getEmail());
 
+
     }
 
     static Stream<String> invalidEmailData() {
         return Stream.of(
                 "testmail.net",
-                "test@@mail.net",
+                "test@@mail.net ",
                 "test@mai@l.net",
                 "test@mailnet",
-                "testmail.net",
-                "testmail.net",
-                "testmail.net",
-                "testmail.net",
-                "testmail.net",
-                "testmail.net"
+                "test@mail.ne.t",
+                "test@mail.net.",
+                "test@mailne.t",
+                "test@ mail.net",
+                "test@mail.?net",
+                "@testmail.net",
+                "1test@mail.net",
+                "_test@mail.net",
+                ".test@mail.net",
+                "test+1@mail.net"
         );
     }
 
