@@ -1,7 +1,4 @@
-package homeworks.homework_35;
-
-import lists.MyArrayList;
-import lists.MyList;
+package homeworks.homework_35.rect;
 
 import java.util.Objects;
 
@@ -60,6 +57,9 @@ public class Rectangle {
 
 
 
+
+
+
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Rectangle)) return false;
@@ -74,10 +74,8 @@ public class Rectangle {
 
     @Override
     public String toString() {
-        return "Rechtangle{" +
-                "length=" + length +
-                ", width=" + width +
-                '}';
+        return String.format("Прямоугольник [длина= %.2f, ширина= %.2f]",
+                length, width);
     }
 
     public double getLength() {

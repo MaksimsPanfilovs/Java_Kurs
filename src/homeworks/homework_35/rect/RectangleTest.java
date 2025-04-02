@@ -1,6 +1,5 @@
-package homeworks.homework_35;
+package homeworks.homework_35.rect;
 
-import lessons.lesson_32.methods.Utils;
 import lists.MyArrayList;
 import lists.MyList;
 
@@ -30,6 +29,14 @@ public class RectangleTest {
         System.out.println("\n===================");
 
         System.out.println("Список до удаления дубликатов");
+        for (Rectangle rect : rectangles) {
+            System.out.println(rect);
+        }
+
+        Rectangle rectangleToRemove = new Rectangle(10, 5);
+        homeworks.homework_35.rect.RectangleUtils.removeDuplicates(rectangles, rectangleToRemove);
+
+        System.out.println("\nСписок после удаления дубликатов:");
         for (Rectangle rect : rectangles) {
             System.out.println(rect);
         }
