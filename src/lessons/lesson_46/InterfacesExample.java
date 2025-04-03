@@ -119,6 +119,28 @@ public class InterfacesExample {
         return result;
     }
 
+        public static List<Integer> listNegative(List<Integer> integers) {
+        List<Integer> result = new ArrayList<>();
+
+        for (Integer value : integers) {
+            if (value < 0) {
+                result.add(value);
+            }
+        }
+        return result;
+    }
+
+    public static List<Integer> listEven(List<Integer> integers) {
+        List<Integer> result = new ArrayList<>();
+
+        for (Integer value : integers) {
+            if (value % 2 == 0) {
+                result.add(value);
+            }
+        }
+        return result;
+    }
+
 
 
 

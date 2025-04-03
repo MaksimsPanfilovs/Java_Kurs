@@ -40,12 +40,14 @@ public class Task1 {
         Map<String, Integer> result = new HashMap<>();
 
         Set<String> keySet1 = map1.keySet();
-        //
+
 //        for (String key1 : keySet1) {
 //            if (map2.containsKey(key1)) {
 //                result.put(key1, map1.get(key1));
 //            }
 //        }
+        // Opt2
+        // Оставить в сете ключи, которые есть в обоих сетах - retainAll.
         keySet1.retainAll(map2.keySet());
         for (String key : keySet1){
             result.put(key, map1.get(key));

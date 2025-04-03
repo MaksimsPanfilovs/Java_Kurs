@@ -12,4 +12,14 @@ public class RectangleUtils {
             }
         }
     }
+
+    public static void removeDuplicates2(MyList<Rectangle> list, Rectangle rectangle) {
+        while (list.remove(rectangle)) {
+            // пустое тело
+        }
+
+//        while (list.contains(rectangle)) {
+//            list.remove(rectangle);
+//        }
+    }
 }

@@ -91,14 +91,14 @@ public class MapExample3 {
         // for-each - перебора всех пар ключ-значение с возможностью применить к ним какую-то функцию.
 
         System.out.println("=============== put vs replace ===============\n");
-        System.out.println(map.put(11, "orange"));
-        System.out.println(map.put(11, "green"));
+        System.out.println(map.put(11, "orange")); // если такого ключа нет - добавляется новая пара key-value.
+        System.out.println(map.put(11, "green")); // если ключ уже есть - значение для этого ключа будет переписано.
 
-        // replace(K key, V value)
-        //
+        // replace(K key, V value) - Если такого ключа нет, новая пара НЕ создается.
+        // Если ключ есть - значение будет переписано.
 
-        System.out.println(map.replace(200, "red")); // ключа нет - новая пара НЕ добовляется.
-        System.out.println(map.replace(15, "red"));
+        System.out.println(map.replace(200, "red")); // ключа нет - новая пара НЕ добавляется.
+        System.out.println(map.replace(15, "red")); // ключ есть - значение будет переписано.
 
         System.out.println("map: " + map);
 
@@ -111,7 +111,7 @@ public class MapExample3 {
             System.out.println(key + ": " + value);
         }
 
-        // foreach() - Перебор всех пар
+        // foreach() - Перебор всех пар ключ-значение с возможностью применить к ним какую-то функцию.
         map.forEach((k, v) -> System.out.println(k + "= " + v));
 
         System.out.println("=============== Многострочное действие ===============\n");
