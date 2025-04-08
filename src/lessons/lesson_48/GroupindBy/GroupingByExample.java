@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class GroupingByExample {
     /*
-    Collectors.groupingBy(Function classifier) - простейшая форма групировки,
+    Collectors.groupingBy(Function classifier) - простейшая форма группировки,
     Группирует элементы по ключу, полученному с помощью функции-классификатора.
     Результат будет Map<K, List<T>>
      */
